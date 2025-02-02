@@ -1,0 +1,21 @@
+
+
+<div class="header">
+    <button>Cadastrar</button>
+</div>
+
+<ul>
+    <li *ngFor="let project of projects">
+        <div class="details">
+            <h2 [ngStyle]="{ color: project.color}">{{ project.name }}</h2>
+            <p>{{ project.description }}</p>
+        </div>
+        
+        <nav>
+            <a (click)="view(project.id)">🔍</a>
+            <a (click)="update(project.id)">✏️</a>
+            <a (click)="delete(project.id)">🗑️ </a>
+        </nav>
+
+    </li>
+</ul>

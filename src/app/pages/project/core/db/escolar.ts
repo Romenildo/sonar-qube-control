@@ -1,7 +1,7 @@
 import { Project } from "../dto/project.interface";
 
 export const ESCOLAR:Project  = {
-    id: 1,
+    id: 2,
     name: 'Escolar',
     description: 'Description 2',
     status: true,
