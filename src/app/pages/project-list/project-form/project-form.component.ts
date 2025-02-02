@@ -15,6 +15,11 @@ export class ProjectFormComponent implements OnInit {
   private typePage: any;
   public form: any;
 
+  monthList: string[] = [
+    'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+  ];
+
   constructor( 
     public activatedRoute: ActivatedRoute,
     private readonly fb: FormBuilder
@@ -61,8 +66,9 @@ export class ProjectFormComponent implements OnInit {
     }));
   }
 
-  removeMonth(i:any): void {
-    console.log('removeMonth');
+  removeMonth(id:any): void {
+    const months = this.form.get('months');
+    months.removeAt(id);
   }
 
 }

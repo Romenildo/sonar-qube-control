@@ -42,4 +42,56 @@
 .months{
     border: 2px solid var(--white-border);
     padding: 1rem;
+    margin-top: 1rem;
+    .month{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        em{
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    .form-group{
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        justify-content: space-between;
+        input, select{
+            background-color: var(--background-color);
+            border: 2px solid var(--background-color-secondary);
+            border-radius: 5px;
+            text-align: left;
+            align-self: flex-start;
+            height: 2em;
+            width: 30%;
+        }
+    }
+}
+
+.button-add{
+    background-color: var(--background-color);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+.button-register{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    &:hover{
+        cursor: pointer;
+        color: white;
+        border: 2px solid white;
+    }
 }

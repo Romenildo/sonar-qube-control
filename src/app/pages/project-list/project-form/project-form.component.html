@@ -28,10 +28,12 @@
         <div class="month-info">
             <div formArrayName="months">
                 <div *ngFor="let month of form.get('months').controls; let i = index;" class="months">
-                    <div [formGroupName]="i">
+                    <div [formGroupName]="i" class="month">
                         <div class="form-group">
-                            <label for="name">Mês: </label>
-                            <input type="text" formControlName="name">
+                            <label for="monthSelect">Mês</label>
+                            <select id="monthSelect" formControlName="name">
+                                <option *ngFor="let m of monthList" [value]="m">{{ m }}</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="code_smells">Code Smells: </label>
@@ -62,15 +64,14 @@
                             <label for="security_hotspots">security_hotspots: </label>
                             <input type="text" formControlName="security_hotspots">
                         </div>
-                        <button type="button" (click)="removeMonth(i)">Remover</button>
+                        <em (click)="removeMonth(i)">🗑️</em>
                     </div>
                 </div>
             </div>
-            <button type="button" (click)="addMonth()">Adicionar</button>
         </div>
-
+        <button class="button-add" type="button" (click)="addMonth()">+</button>
         <div class="form-group">
-            <button type="submit" [disabled]="form.invalid">Salvar</button>
+            <button class="button-register" type="submit" [disabled]="form.invalid">Salvar</button>
         </div>
     </form>
 </div>
