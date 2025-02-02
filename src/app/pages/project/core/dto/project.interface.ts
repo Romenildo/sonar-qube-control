@@ -12,10 +12,6 @@ export interface Month {
     id: number;
     name: string;
     status: string;
-    data: Data;
-}
-
-export interface Data {
     code_smells: number;
     bugs: number;
     vulnerabilities: number;

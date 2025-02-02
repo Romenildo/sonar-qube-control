@@ -1,0 +1,45 @@
+
+.form-content{
+    padding: 1rem;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .project-info{
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            border: 2px solid var(--white-border);
+            padding: 0.75rem;
+            border-radius: 5px;
+            width: 40%;
+
+            .form-group{
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                justify-content: space-between;
+                input, textarea, select{
+                    background-color: var(--background-color);
+                    border: 2px solid var(--background-color-secondary);
+                    border-radius: 5px;
+                    text-align: left;
+                    align-self: flex-start;
+                    height: 2em;
+                }
+            }
+        }
+
+
+        .month-info{
+            display: flex;
+        }
+    }
+}
+
+
+.months{
+    border: 2px solid var(--white-border);
+    padding: 1rem;
+}

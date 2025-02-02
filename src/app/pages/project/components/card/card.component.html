@@ -12,7 +12,7 @@
             <div class="status-item" *ngIf="shows.code_smells">
                 <div class="status-block">
                     <span>Code Smell: </span>
-                    <input type="text" value="{{ project.months[currentMonth].data.code_smells }}" />
+                    <input type="text" value="{{ project.months[currentMonth].code_smells }}" />
                 </div>
                 &nbsp; => &nbsp;
                 <div class="status-block">
@@ -20,8 +20,8 @@
                     
                     <input 
                         type="text"
-                        [ngClass]="getColorClass(project.months[currentMonth].data.code_smells, project.months[currentMonth+1].data.code_smells)"
-                        value="{{ project.months[currentMonth+1].data.code_smells }}" />
+                        [ngClass]="getColorClass(project.months[currentMonth].code_smells, project.months[currentMonth+1].code_smells)"
+                        value="{{ project.months[currentMonth+1].code_smells }}" />
                 </div>
             </div>
 
@@ -29,15 +29,15 @@
             <div class="status-item" *ngIf="shows.bugs">
                 <div class="status-block">
                     <span>Bugs: </span>
-                    <input type="text"  value="{{ project.months[currentMonth].data.bugs }}" />
+                    <input type="text"  value="{{ project.months[currentMonth].bugs }}" />
                 </div>
                 &nbsp; => &nbsp;
                 <div class="status-block">
                     <span>Bugs: </span>
                     <input 
                         type="text" 
-                        [ngClass]="getColorClass(project.months[currentMonth].data.bugs, project.months[currentMonth+1].data.bugs)"
-                        value="{{ project.months[currentMonth+1].data.bugs}}" />
+                        [ngClass]="getColorClass(project.months[currentMonth].bugs, project.months[currentMonth+1].bugs)"
+                        value="{{ project.months[currentMonth+1].bugs}}" />
                 </div>
             </div>
 
@@ -45,15 +45,15 @@
             <div class="status-item" *ngIf="shows.duplications">
                 <div class="status-block">
                     <span>Duplicações(%): </span>
-                    <input type="text" value="{{ project.months[currentMonth].data.duplications }}" />
+                    <input type="text" value="{{ project.months[currentMonth].duplications }}" />
                 </div>
                 &nbsp; => &nbsp;
                 <div class="status-block">
                     <span>Duplicações(%): </span>
                     <input 
                         type="text"
-                        [ngClass]="getColorClass(project.months[currentMonth].data.duplications, project.months[currentMonth+1].data.duplications)"
-                        value="{{ project.months[currentMonth+1].data.duplications + '%'}}" />
+                        [ngClass]="getColorClass(project.months[currentMonth].duplications, project.months[currentMonth+1].duplications)"
+                        value="{{ project.months[currentMonth+1].duplications + '%'}}" />
                 </div>
             </div>
 
@@ -61,15 +61,15 @@
             <div class="status-item" *ngIf="shows.vulnerabilities">
                 <div class="status-block">
                     <span>Vulnerabilidades: </span>
-                    <input type="text" value="{{ project.months[currentMonth].data.vulnerabilities }}" />
+                    <input type="text" value="{{ project.months[currentMonth].vulnerabilities }}" />
                 </div>
                 &nbsp; => &nbsp;
                 <div class="status-block">
                     <span>Vulnerabilidades: </span>
                     <input 
                         type="text"
-                        [ngClass]="getColorClass(project.months[currentMonth].data.vulnerabilities, project.months[currentMonth+1].data.vulnerabilities)"
-                        value="{{ project.months[currentMonth+1].data.vulnerabilities }}" />
+                        [ngClass]="getColorClass(project.months[currentMonth].vulnerabilities, project.months[currentMonth+1].vulnerabilities)"
+                        value="{{ project.months[currentMonth+1].vulnerabilities }}" />
                 </div>
 
             </div>
@@ -78,15 +78,15 @@
             <div class="status-item" *ngIf="shows.code_coverage">
                 <div class="status-block" >
                     <span>Cobertura de Código(%): </span>
-                    <input type="text" value="{{ project.months[currentMonth].data.code_coverage }}" />
+                    <input type="text" value="{{ project.months[currentMonth].code_coverage }}" />
                 </div>
                 &nbsp; => &nbsp;
                 <div class="status-block">
                     <span>Cobertura de Código(%): </span>
                     <input 
                         type="text"
-                        [ngClass]="getColorClass(project.months[currentMonth].data.code_coverage, project.months[currentMonth+1].data.code_coverage)"
-                        value="{{ project.months[currentMonth+1].data.code_coverage + '%'}}" />
+                        [ngClass]="getColorClass(project.months[currentMonth].code_coverage, project.months[currentMonth+1].code_coverage)"
+                        value="{{ project.months[currentMonth+1].code_coverage + '%'}}" />
                 </div>
             
 
